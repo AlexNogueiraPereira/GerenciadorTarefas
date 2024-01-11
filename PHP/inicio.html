@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+		<h1>Adicionar Tarefa</h1>
+	<center><hr class="red-hr"></center>
+
+	<form action="./exibe.php" method="POST">
+		<table border = 0>
+			<tr> <td>Título:</td> <td><input type='text' name='titulo' size='60' maxlength='150'></td> </tr>
+			<tr> <td>Descrição:</td> <td><textarea name='descricao' rows='5' cols='60'></textarea></td> </tr>
+			<tr> <td>Data:</td> <td><input type='date' name='datanasc'size='60'></td></tr>
+
+			<tr> <td style="text-align: right;"> <button type='reset'>Limpar</button></td> // Botão de limpar formuário
+			<td><button type='submit' name='btEnviar' value='sub'>Enviar</button></td> </tr> // Botão de enviar
+
+		</table>
+	</form>
+</body>
+</html>
