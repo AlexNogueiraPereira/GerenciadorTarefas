@@ -6,12 +6,67 @@
     <link rel="stylesheet" href="../estilos/estilo.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Gerenciador de Tarefas</title>
+
+      <style>
+
+        .container-color, .bemvindo{
+            background-color: #f8f8f8;
+            padding: 20px;
+            width: 100%;
+            max-width: 100%;
+            margin: 20px auto;
+            height: 100%;
+        }
+
+        .borda {
+            border: 1px solid #ccc; /* Cor e estilo da borda */
+            border-radius: 5px; /* Borda arredondada */
+            padding: 20px; 
+            margin: 20px auto;
+            max-width: 100%; 
+        }
+
+        .navbar-custom {
+        	background-color: red;
+        }
+
+    </style>
 </head>
-<body>
-    <div class='conteiner'>
-    <h2>Inserir Tarefa</h2>
-    <form action="inserir.php" method="post">
-        <table width="100%">
+<body> 
+
+        <div class="container-fluid navbar navbar-expand-lg navbar-light navbar-custom">
+        <a class="navbar-brand" href="#">Gerenciador de Tarefas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="inicio.php">Inserir Tarefa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exibir.php">Listar Tarefas</a>
+                </li>
+            </ul>
+        </div>
+    </div>  
+
+    <div class="container mx-auto container-color">
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Quadro de Bem-Vindo -->
+            <div class="bemvindo">
+                <h3>Bem-vindo ao seu Gerenciador de Tarefas</h3>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+     <div class="container mx-auto container-color text-center">
+
+        <center><h2>Inserir Tarefa</h2></center>
+
+        <form class="borda"action="inicio.php" method="post">
+        <table class="mx-auto">
 
             <tr>
                 <td><label for="titulo">Título:</label></td>
@@ -37,10 +92,11 @@
                 </select> </td>
             </tr>
         </table>
-
-        <input type="submit" value="Adicionar Tarefa">    
+        <br>
+        <button class="btn btn-primary" type="submit">Adicionar Tarefa</button>
+        <a class="btn btn-primary" href="exibir.php" role="button">Listar Tarefas</a>
     </form>
-        <a href="exibir.php"><button>Listar Tarefas</button></a>
+        
         <br>
     <?php
         //configurações do banco de dados
@@ -102,5 +158,10 @@
         }
 ?>
 </div>
+
+
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEX0fAz4lF2Rx4A3Cq5axrV+5SEFhY6F5MI5W" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

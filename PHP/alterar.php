@@ -24,7 +24,7 @@ if (isset($_GET['id_tarefa']) && is_numeric($_GET['id_tarefa'])) {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
 
-        // Preencha as variáveis com os valores existentes
+        // Preenche as variáveis com os valores existentes
         $titulo = $row['titulo'];
         $descricao = $row['descricao'];
         $data_vencimento = $row['data_vencimento'];
