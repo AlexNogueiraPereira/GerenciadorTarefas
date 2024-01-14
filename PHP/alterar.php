@@ -58,10 +58,8 @@ if (isset($_GET['id_tarefa']) && is_numeric($_GET['id_tarefa'])) {
             background-color: #f8f8f8;
             width: 100%;
             max-width: 100%;
-            height: 100%;
-            
+            height: 100%;    
         }
-
         .navbar-custom{
             background-color: #007BFF;
             color: white;

@@ -1,6 +1,6 @@
 # GerenciadorTarefas
 
-Este é um gerenciador de tarefas bem simples desenvolvido em PHP, MySQL, HTML e CSS. Ele permite que você adicione, edite, exclua, conclua e liste tarefas.
+Este é um gerenciador de tarefas bem simples desenvolvido em PHP, MySQL, HTML e CSS (e Bootstrap). Ele permite que você adicione, edite, exclua, conclua e liste tarefas.
 
 
 ## Requisitos
