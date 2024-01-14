@@ -11,6 +11,7 @@
 
         .container-color, .bemvindo{
             background-color: #f8f8f8;
+            font-family:;
             padding: 20px;
             width: 100%;
             max-width: 100%;
@@ -45,7 +46,7 @@
                     <a class="nav-link" href="inicio.php">Inserir Tarefa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="exibir.php">Listar Tarefas</a>
+                    <a class="nav-link" href="listar.php">Listar Tarefas</a>
                 </li>
             </ul>
         </div>
