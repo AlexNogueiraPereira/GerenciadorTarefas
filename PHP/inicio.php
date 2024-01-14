@@ -3,27 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilos/estilo.css">
+    <link rel="stylesheet" href="../Estilos/estilo.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Gerenciador de Tarefas</title>
-
-    <style>
-          body{
-            background-color: #f8f8f8;
-        }
-        .container-color{
-            background-color: #f8f8f8;
-            width: 100%;
-            max-width: 100%;
-            height: 100%;
-        }
-
-        .navbar-custom{
-            background-color: #007BFF;
-            color: white;
-        }
-      
-    </style>
 </head>
 <body>
 
