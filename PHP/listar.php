@@ -27,17 +27,17 @@
 <body>
 
     <div class="container-fluid navbar navbar-expand-lg navbar-light navbar-custom">
-         <a class="navbar-brand text-light" href="inserir.php">Gerenciador de Tarefas</a>
+         <a class="navbar-brand text-light" href="inicio.php">Gerenciador de Tarefas</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="inserir.php">Inserir Tarefa</a>
+                    <a class="nav-link text-light" href="inicio.php">Inserir Tarefa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="exibir.php">Listar Tarefas</a>
+                    <a class="nav-link text-light" href="listar.php">Listar Tarefas</a>
                 </li>
             </ul>
         </div>
@@ -47,7 +47,7 @@
     <div class="container mx-auto container-color">
         <h2>Listagem de Tarefas</h2>
 
-    <form action="exibir.php" method="post">
+    <form action="listar.php" method="post">
     <label for="sortOption">Ordenar por:</label>
     <select id="sortOption" name="sortOption">
         <?php
@@ -99,25 +99,27 @@
         // Exibe as tarefas
        if ($result->num_rows > 0) {
         echo "<form action='marcar_tarefa.php' method='post'>";
-        echo "<table class='table table-striped'>"; // Adicionei 'table-striped' para listras na tabela
+        echo "<table class='table table-striped'>"; //adicionei 'table-striped' para listras na tabela
         echo "<thead>";
         echo "<tr>";
-        echo "<th>Status</th>";  // Coluna Status vem primeiro
+        echo "<th>Status</th>";
+        echo "<th>Prioridade</th>";
         echo "<th>Tarefa</th>";
         echo "<th>Descrição</th>";
         echo "<th>Data de Vencimento</th>";
         echo "<th>Criada em</th>";
-        echo "<th>Ações</th>";  // Coluna Ações vem por último
+        echo "<th>Ações</th>";
         echo "</tr>";
         echo "</thead>";
         echo "<tbody>";
 
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
-            echo "<td>" . ($row["status"] == 'concluida' ? 'Concluída' : 'Não concluída') . "</td>";  // Coluna Status
+            echo "<td>" . ($row["status"] == 'concluida' ? 'Concluída' : 'Não concluída') . "</td>";
+            echo "<td>" . $row["prioridade"] . "</td>";
             echo "<td>" . $row["titulo"] . "</td>";
             echo "<td>" . $row["descricao"] . "</td>";
-            echo "<td>" . $row["data_vencimento"] . "</td>"; // Adicionado campo de Data de Vencimento
+            echo "<td>" . $row["data_vencimento"] . "</td>";
             echo "<td>" . $row["data_adicionada"] . "</td>";
             echo "<td>
                     <a href='excluir.php?id_tarefa=" . $row['id_tarefa'] . "'>Excluir</a>
@@ -130,13 +132,13 @@
         echo "</tbody>";
         echo "</table>";
         echo "<br><br>";
-        echo "<a class='btn btn-primary' href='inserir.php' role='button'>Voltar</a>";
+        echo "<a class='btn btn-primary' href='inicio.php' role='button'>Voltar</a>";
         echo "</form>";
     } else {
         echo "Nenhuma tarefa encontrada.";
     }
     }
-    // Fecha a conexão com o banco de dados
+    //fecha a conexão com o banco de dados
     $conn->close();
     ?>
 

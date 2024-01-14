@@ -7,68 +7,48 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Gerenciador de Tarefas</title>
 
-      <style>
-
-        .container-color, .bemvindo{
+    <style>
+          body{
             background-color: #f8f8f8;
-            font-family:;
-            padding: 20px;
+        }
+        .container-color{
+            background-color: #f8f8f8;
             width: 100%;
             max-width: 100%;
-            margin: 20px auto;
             height: 100%;
         }
 
-        .borda {
-            border: 1px solid #ccc; /* Cor e estilo da borda */
-            border-radius: 5px; /* Borda arredondada */
-            padding: 20px; 
-            margin: 20px auto;
-            max-width: 100%; 
+        .navbar-custom{
+            background-color: #007BFF;
+            color: white;
         }
-
-        .navbar-custom {
-        	background-color: red;
-        }
-
+      
     </style>
 </head>
-<body> 
+<body>
 
-        <div class="container-fluid navbar navbar-expand-lg navbar-light navbar-custom">
-        <a class="navbar-brand" href="#">Gerenciador de Tarefas</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="inicio.php">Inserir Tarefa</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="listar.php">Listar Tarefas</a>
-                </li>
-            </ul>
-        </div>
-    </div>  
+<div class="container-fluid navbar navbar-expand-lg navbar-light navbar-custom">
+    <a class="navbar-brand text-light" href="inicio.php">Gerenciador de Tarefas</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link text-light" href="inicio.php">Inserir Tarefa</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="listar.php">Listar Tarefas</a>
+            </li>
+        </ul>
+    </div>
+</div>
 
-    <div class="container mx-auto container-color">
-    <div class="row">
-        <div class="col-md-6">
-            <!-- Quadro de Bem-Vindo -->
-            <div class="bemvindo">
-                <h3>Bem-vindo ao seu Gerenciador de Tarefas</h3>
-            </div>
-        </div>
+<div class="container mx-auto container-color text-center">
 
-        <div class="col-md-6">
-     <div class="container mx-auto container-color text-center">
-
-        <center><h2>Inserir Tarefa</h2></center>
-
-        <form class="borda"action="inicio.php" method="post">
+        <form action="inicio.php" method="post">
         <table class="mx-auto">
-
+            <br><h2>Inserir Tarefa</h2><br>
             <tr>
                 <td><label for="titulo">Título:</label></td>
                 <td> <input type="text" id="titulo" name="titulo" required></td>
@@ -95,9 +75,8 @@
         </table>
         <br>
         <button class="btn btn-primary" type="submit">Adicionar Tarefa</button>
-        <a class="btn btn-primary" href="exibir.php" role="button">Listar Tarefas</a>
+        <a class="btn btn-primary" href="listar.php" role="button">Listar Tarefas</a>
     </form>
-        
         <br>
     <?php
         //configurações do banco de dados
@@ -159,9 +138,7 @@
         }
 ?>
 </div>
-
-
- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEX0fAz4lF2Rx4A3Cq5axrV+5SEFhY6F5MI5W" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
